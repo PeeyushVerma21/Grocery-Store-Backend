@@ -1,0 +1,1331 @@
+{
+	"info": {
+		"_postman_id": "e370fa68-cd40-4062-86c9-49bf4897f3d1",
+		"name": "Grocery Django",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43030755"
+	},
+	"item": [
+		{
+			"name": "register api",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"testuser\",\r\n  \"password\": \"strongpassword\",\r\n  \"role\": \"customer\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/accounts/register/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"accounts",
+						"register",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login api",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"testuser\",\r\n  \"password\": \"strongpassword\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/accounts/login/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"accounts",
+						"login",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "login api",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"testuser\",\r\n  \"password\": \"strongpassword\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/accounts/login/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"accounts",
+								"login",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 02 Aug 2025 02:26:00 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.13.1"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "483"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"refresh\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc1NDcwNjM2MCwiaWF0IjoxNzU0MTAxNTYwLCJqdGkiOiJmOTBmMGRhYjZjZDU0OWUzYTk0NGM1MzQyYmEyMDUxNSIsInVzZXJfaWQiOjJ9.yUHHVGcSnrlVVlHyOZfWVbOCMipoU048blra994ywrU\",\n    \"access\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzU0MTA1MTYwLCJpYXQiOjE3NTQxMDE1NjAsImp0aSI6IjM4MDAwMzRlNDUxOTQxMDk5MWY2YzUwZDE5M2YzZDYwIiwidXNlcl9pZCI6Mn0.wkagZZgJmmVy-IGbscgwA1YZT8WmRA6wiFOc50vDvDE\"\n}"
+				}
+			]
+		},
+		{
+			"name": "get products api",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/products/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"products",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get products api",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/products/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"products",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 02 Aug 2025 02:26:28 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.13.1"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "632"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 2,\n        \"name\": \"Bread\",\n        \"category\": \"Bakery\",\n        \"price\": \"3.00\",\n        \"stock\": 16,\n        \"image_url\": \"http://example.com/bread.jpg\",\n        \"sold_count\": 9\n    },\n    {\n        \"id\": 3,\n        \"name\": \"Jam\",\n        \"category\": \"Bakery\",\n        \"price\": \"4.00\",\n        \"stock\": 25,\n        \"image_url\": \"http://example.com/bread.jpg\",\n        \"sold_count\": 0\n    },\n    {\n        \"id\": 4,\n        \"name\": \"Jam\",\n        \"category\": \"Bakery\",\n        \"price\": \"4.00\",\n        \"stock\": 25,\n        \"image_url\": \"http://example.com/bread.jpg\",\n        \"sold_count\": 0\n    },\n    {\n        \"id\": 5,\n        \"name\": \"Jam\",\n        \"category\": \"Bakery\",\n        \"price\": \"4.00\",\n        \"stock\": 25,\n        \"image_url\": \"http://example.com/bread.jpg\",\n        \"sold_count\": 0\n    },\n    {\n        \"id\": 6,\n        \"name\": \"Eggs\",\n        \"category\": \"Dairy\",\n        \"price\": \"3.00\",\n        \"stock\": 20,\n        \"image_url\": \"http://example.com/eggs.jpg\",\n        \"sold_count\": 0\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "get products api Copy",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/products/?category=Bakery",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"products",
+						""
+					],
+					"query": [
+						{
+							"key": "category",
+							"value": "Bakery"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add to cart api",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/orders/cart/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"orders",
+						"cart",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "add to cart api",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzU0MTA1MTYwLCJpYXQiOjE3NTQxMDE1NjAsImp0aSI6IjM4MDAwMzRlNDUxOTQxMDk5MWY2YzUwZDE5M2YzZDYwIiwidXNlcl9pZCI6Mn0.wkagZZgJmmVy-IGbscgwA1YZT8WmRA6wiFOc50vDvDE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"product\": 2,\r\n  \"quantity\": 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/orders/cart/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"orders",
+								"cart",
+								""
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 02 Aug 2025 02:27:41 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.13.1"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "33"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 6,\n    \"product\": 2,\n    \"quantity\": 3\n}"
+				}
+			]
+		},
+		{
+			"name": "manager login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"manager1\",\r\n  \"password\": \"manpass123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/accounts/login/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"accounts",
+						"login",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "manager login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"manager1\",\r\n  \"password\": \"manpass123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/accounts/login/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"accounts",
+								"login",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 02 Aug 2025 02:27:51 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.13.1"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "483"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"refresh\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc1NDcwNjQ3MSwiaWF0IjoxNzU0MTAxNjcxLCJqdGkiOiI0NTIzODlhZmEwNjk0NjFmOTc3ZTdiMjNiOWU3ZWViMiIsInVzZXJfaWQiOjR9.ViGr5Q4ykRjTb7bRjR3YCoa5GmNSAw8Ozea6WcRe3W4\",\n    \"access\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzU0MTA1MjcxLCJpYXQiOjE3NTQxMDE2NzEsImp0aSI6IjJiODEwYWM2MmYwNDRlMzI5N2MzMWU0M2VlYmExZGFjIiwidXNlcl9pZCI6NH0.iJFX37gcBAb-IkMhI_uOVD_KXO8jph_deOA3WpZ5uc4\"\n}"
+				}
+			]
+		},
+		{
+			"name": "refresh token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"refresh\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc1NDcwNTMwNiwiaWF0IjoxNzU0MTAwNTA2LCJqdGkiOiI4YzY5NWNjNzYxNjU0NWY2OWNlMWMwNjdkZDFjZmQyNSIsInVzZXJfaWQiOjJ9.BZfUA06lrRwgfUn3sXmVD6EsHew_gXRt5BPWEGAwF6Q\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/accounts/token/refresh/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"accounts",
+						"token",
+						"refresh",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "refresh token",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"refresh\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc1NDcwNTMwNiwiaWF0IjoxNzU0MTAwNTA2LCJqdGkiOiI4YzY5NWNjNzYxNjU0NWY2OWNlMWMwNjdkZDFjZmQyNSIsInVzZXJfaWQiOjJ9.BZfUA06lrRwgfUn3sXmVD6EsHew_gXRt5BPWEGAwF6Q\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/accounts/token/refresh/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"accounts",
+								"token",
+								"refresh",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 02 Aug 2025 02:28:00 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.13.1"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "241"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"access\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzU0MTA1MjgwLCJpYXQiOjE3NTQxMDA1MDYsImp0aSI6Ijg2MDQ3YTQzNzM1MjRlNWE4Y2I3Nzc5OGUzOWIyZGUwIiwidXNlcl9pZCI6Mn0.fMyYjdMjfVaG2jM6UqyNDOwxsFYNeqD4kPRXJ1EDldg\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Add products",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzU0MTA0MzIwLCJpYXQiOjE3NTQxMDA3MjAsImp0aSI6ImJlNjU0ZWUzZDUzYzRjNmY5MzA1YzE4ODVkYjczZDVhIiwidXNlcl9pZCI6NH0.ZP4muWz92NweKhA4ewZJx9rrL26o9W6f3bgFS-gDyiU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Eggs\",\r\n  \"category\": \"Dairy\",\r\n  \"price\": \"3.00\",\r\n  \"stock\": 20,\r\n  \"image_url\": \"http://example.com/eggs.jpg\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/products/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"products",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Add products",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzU0MTA0MzIwLCJpYXQiOjE3NTQxMDA3MjAsImp0aSI6ImJlNjU0ZWUzZDUzYzRjNmY5MzA1YzE4ODVkYjczZDVhIiwidXNlcl9pZCI6NH0.ZP4muWz92NweKhA4ewZJx9rrL26o9W6f3bgFS-gDyiU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Milk\",\r\n  \"category\": \"Dairy\",\r\n  \"price\": \"3.00\",\r\n  \"stock\": 20,\r\n  \"image_url\": \"http://example.com/eggs.jpg\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/products/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"products",
+								""
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 02 Aug 2025 02:28:17 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.13.1"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "124"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 7,\n    \"name\": \"Milk\",\n    \"category\": \"Dairy\",\n    \"price\": \"3.00\",\n    \"stock\": 20,\n    \"image_url\": \"http://example.com/eggs.jpg\",\n    \"sold_count\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "Get cart",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzU0MTA0MTk2LCJpYXQiOjE3NTQxMDA1OTYsImp0aSI6Ijk2OWQwOThkMzU2ZjRlODM5ZjQ5MjBiNWZjYzJmZWJhIiwidXNlcl9pZCI6Mn0.IRLtLRwJaVUJLqkETV6z1FeU6S25xd0Asb5LhsfGdao",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/orders/cart/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"orders",
+						"cart",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get cart",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzU0MTA0MTk2LCJpYXQiOjE3NTQxMDA1OTYsImp0aSI6Ijk2OWQwOThkMzU2ZjRlODM5ZjQ5MjBiNWZjYzJmZWJhIiwidXNlcl9pZCI6Mn0.IRLtLRwJaVUJLqkETV6z1FeU6S25xd0Asb5LhsfGdao",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/orders/cart/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"orders",
+								"cart",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 02 Aug 2025 02:28:42 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.13.1"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "35"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 6,\n        \"product\": 2,\n        \"quantity\": 3\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Checkout",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzU0MTA0MTk2LCJpYXQiOjE3NTQxMDA1OTYsImp0aSI6Ijk2OWQwOThkMzU2ZjRlODM5ZjQ5MjBiNWZjYzJmZWJhIiwidXNlcl9pZCI6Mn0.IRLtLRwJaVUJLqkETV6z1FeU6S25xd0Asb5LhsfGdao",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/orders/checkout/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"orders",
+						"checkout",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Checkout",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzU0MTA0MTk2LCJpYXQiOjE3NTQxMDA1OTYsImp0aSI6Ijk2OWQwOThkMzU2ZjRlODM5ZjQ5MjBiNWZjYzJmZWJhIiwidXNlcl9pZCI6Mn0.IRLtLRwJaVUJLqkETV6z1FeU6S25xd0Asb5LhsfGdao",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/orders/checkout/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"orders",
+								"checkout",
+								""
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 02 Aug 2025 02:28:50 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.13.1"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "288"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 7,\n    \"total_price\": \"9.00\",\n    \"purchase_date\": \"2025-08-02T02:28:50.148899Z\",\n    \"user\": 2,\n    \"order_items\": [\n        {\n            \"id\": 4,\n            \"product\": {\n                \"id\": 2,\n                \"name\": \"Bread\",\n                \"category\": \"Bakery\",\n                \"price\": \"3.00\",\n                \"stock\": 13,\n                \"image_url\": \"http://example.com/bread.jpg\",\n                \"sold_count\": 12\n            },\n            \"quantity\": 3,\n            \"price_at_purchase\": \"3.00\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Add to wishlist",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzU0MTA0MTk2LCJpYXQiOjE3NTQxMDA1OTYsImp0aSI6Ijk2OWQwOThkMzU2ZjRlODM5ZjQ5MjBiNWZjYzJmZWJhIiwidXNlcl9pZCI6Mn0.IRLtLRwJaVUJLqkETV6z1FeU6S25xd0Asb5LhsfGdao",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"product\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/orders/wishlist/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"orders",
+						"wishlist",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Add to wishlist",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzU0MTA0MTk2LCJpYXQiOjE3NTQxMDA1OTYsImp0aSI6Ijk2OWQwOThkMzU2ZjRlODM5ZjQ5MjBiNWZjYzJmZWJhIiwidXNlcl9pZCI6Mn0.IRLtLRwJaVUJLqkETV6z1FeU6S25xd0Asb5LhsfGdao",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"product\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/orders/wishlist/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"orders",
+								"wishlist",
+								""
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 02 Aug 2025 02:28:59 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.13.1"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "20"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 3,\n    \"product\": 2\n}"
+				}
+			]
+		},
+		{
+			"name": "Get wishlist",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzU0MTA0MTk2LCJpYXQiOjE3NTQxMDA1OTYsImp0aSI6Ijk2OWQwOThkMzU2ZjRlODM5ZjQ5MjBiNWZjYzJmZWJhIiwidXNlcl9pZCI6Mn0.IRLtLRwJaVUJLqkETV6z1FeU6S25xd0Asb5LhsfGdao",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/orders/wishlist/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"orders",
+						"wishlist",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get wishlist",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzU0MTA0MTk2LCJpYXQiOjE3NTQxMDA1OTYsImp0aSI6Ijk2OWQwOThkMzU2ZjRlODM5ZjQ5MjBiNWZjYzJmZWJhIiwidXNlcl9pZCI6Mn0.IRLtLRwJaVUJLqkETV6z1FeU6S25xd0Asb5LhsfGdao",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/orders/wishlist/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"orders",
+								"wishlist",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 02 Aug 2025 02:29:07 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.13.1"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "64"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"product\": 2\n    },\n    {\n        \"id\": 2,\n        \"product\": 2\n    },\n    {\n        \"id\": 3,\n        \"product\": 2\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Sales Report",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzU0MTA0MzIwLCJpYXQiOjE3NTQxMDA3MjAsImp0aSI6ImJlNjU0ZWUzZDUzYzRjNmY5MzA1YzE4ODVkYjczZDVhIiwidXNlcl9pZCI6NH0.ZP4muWz92NweKhA4ewZJx9rrL26o9W6f3bgFS-gDyiU",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/products/sales_report/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"products",
+						"sales_report",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Sales Report",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzU0MTA0MzIwLCJpYXQiOjE3NTQxMDA3MjAsImp0aSI6ImJlNjU0ZWUzZDUzYzRjNmY5MzA1YzE4ODVkYjczZDVhIiwidXNlcl9pZCI6NH0.ZP4muWz92NweKhA4ewZJx9rrL26o9W6f3bgFS-gDyiU",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/products/sales_report/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"products",
+								"sales_report",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 02 Aug 2025 02:29:16 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.13.1"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "758"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 2,\n        \"name\": \"Bread\",\n        \"category\": \"Bakery\",\n        \"price\": \"3.00\",\n        \"stock\": 13,\n        \"image_url\": \"http://example.com/bread.jpg\",\n        \"sold_count\": 12\n    },\n    {\n        \"id\": 3,\n        \"name\": \"Jam\",\n        \"category\": \"Bakery\",\n        \"price\": \"4.00\",\n        \"stock\": 25,\n        \"image_url\": \"http://example.com/bread.jpg\",\n        \"sold_count\": 0\n    },\n    {\n        \"id\": 4,\n        \"name\": \"Jam\",\n        \"category\": \"Bakery\",\n        \"price\": \"4.00\",\n        \"stock\": 25,\n        \"image_url\": \"http://example.com/bread.jpg\",\n        \"sold_count\": 0\n    },\n    {\n        \"id\": 5,\n        \"name\": \"Jam\",\n        \"category\": \"Bakery\",\n        \"price\": \"4.00\",\n        \"stock\": 25,\n        \"image_url\": \"http://example.com/bread.jpg\",\n        \"sold_count\": 0\n    },\n    {\n        \"id\": 6,\n        \"name\": \"Eggs\",\n        \"category\": \"Dairy\",\n        \"price\": \"3.00\",\n        \"stock\": 20,\n        \"image_url\": \"http://example.com/eggs.jpg\",\n        \"sold_count\": 0\n    },\n    {\n        \"id\": 7,\n        \"name\": \"Milk\",\n        \"category\": \"Dairy\",\n        \"price\": \"3.00\",\n        \"stock\": 20,\n        \"image_url\": \"http://example.com/eggs.jpg\",\n        \"sold_count\": 0\n    }\n]"
+				}
+			]
+		}
+	]
+}
