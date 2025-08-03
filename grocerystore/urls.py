@@ -16,9 +16,41 @@ Including another URLconf
 """
 
 from django.contrib import admin
+from django.http import HttpResponse
 from django.urls import path, include
 
+def landing_page(request):
+    html_content = """
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Grocery Store Backend API</title>
+        <style>
+            body { font-family: Arial, sans-serif; padding: 20px; background-color: #f4f4f4; }
+            .container { background: white; padding: 30px; border-radius: 8px; max-width: 600px; margin: auto; }
+            a { color: #007acc; text-decoration: none; }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Grocery Store Backend API</h1>
+            <p>This is a Django REST API project.</p>
+            <p><strong>Available Endpoints:</strong></p>
+            <ul>
+                <li>/api/accounts/</li>
+                <li>/api/products/</li>
+                <li>/api/orders/</li>
+            </ul>
+            <p>View the code on GitHub:</p>
+            <p><a href="https://github.com/PeeyushVerma21/Grocery-Store-Backend" target="_blank">GitHub Repository</a></p>
+        </div>
+    </body>
+    </html>
+    """
+    return HttpResponse(html_content)
+
 urlpatterns = [
+    path('', landing_page),
     path("admin/", admin.site.urls),
     path('api/accounts/', include('accounts.urls')),
     path('api/products/', include('products.urls')),
